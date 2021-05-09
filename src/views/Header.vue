@@ -2,12 +2,12 @@
   <div>
     <a-row class="header" style="padding: 15px">
       <a-col :xs="23" :sm="11" :md="11" :lg="1" :xl="1"> </a-col>
-      <a-col :xs="23" :sm="11" :md="11" :lg="6" :xl="6">
+      <a-col :xs="23" :sm="11" :md="11" :lg="24" :xl="24">
         <router-link to="/">
-          <span style="color: white; font-size: 70px;font:oblique bold  cursive">Betty</span>
+          <span style="color: white; font-size: 60px;font:oblique bold  cursive">Betty Pastelería </span>
         </router-link>
       </a-col>
-      <a-col
+      <!-- <a-col
         :xs="23"
         :sm="11"
         :md="11"
@@ -69,7 +69,7 @@
         <a-button style="color: #086fbb">
           <a-icon type="shopping-cart" /> | Carrito</a-button
         >
-      </a-col>
+      </a-col> -->
     </a-row>
     <a-row>
       <!-- <a-col

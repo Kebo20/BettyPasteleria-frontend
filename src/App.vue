@@ -35,9 +35,9 @@
                 <a-icon type="safety-certificate" />ADMIN
               </router-link>
             </a-menu-item>
-            <a-menu-item key="home" >
+            <!-- <a-menu-item key="home" >
               <router-link to="/"> <a-icon type="shop" />Inicio </router-link>
-            </a-menu-item>
+            </a-menu-item> -->
               <!-- <a-menu-item
               key="fb"
             >
@@ -50,7 +50,7 @@
             </a-menu-item> -->
             <a-menu-item v-if="this.$store.state.rol == ''" key="login">
               <router-link to="/login">
-                <a-icon type="login" />Ingresar
+                <a-icon type="login" />Login
               </router-link>
             </a-menu-item>
             <a-menu-item

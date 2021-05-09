@@ -25,12 +25,12 @@
           </a-list-item>
 
           <div slot="header">
-            <a-icon type="menu" /> <span>CATEGORÍAS</span>
+            <a-icon type="menu" /> <span>Buscar en: </span>
           </div>
           <!-- <div slot="footer"></div> -->
         </a-list>
          <div class="div-freestyle item-category" @click="link('all')" style="padding:10px;padding-left:36px;cursor:pointer">
-          <span>Todas las categorias</span>
+          <span>TODAS LAS CATEGORÍAS</span>
         </div>
       </a-col>
 
@@ -47,7 +47,7 @@
             :md="13"
             :lg="4"
             :xl="4"
-            style="margin-top: 30px"
+            style="margin-top: 30px;display:none"
           >
             <a-select
               placeholder="Ordenar por "
@@ -67,7 +67,7 @@
             :lg="2"
             :xl="2"
             v-show="order == 'ASC'"
-            style="margin-top: 30px"
+            style="margin-top: 30px;display:none"
           >
             <a-button shape="circle" icon="up" @click="changeOrder" />
           </a-col>
@@ -94,7 +94,7 @@
             style="margin-top: 30px"
           >
             <input
-              placeholder="Buscar aquí"
+              placeholder="Busque aquí "
               style="width: 100%"
               class="ant-input"
               v-model="search"
@@ -118,6 +118,18 @@
             :key="product.idProduct"
           >
             <Product :product="product" />
+          </a-col>
+
+           <a-col
+            :xs="23"
+            :sm="11"
+            :md="11"
+            :lg="8"
+            :xl="8"
+            style="margin-bottom: 5px"
+            v-if="arrayProducts.length==0"
+          >
+            <span>Sin resultados encontrados</span>
           </a-col>
         </a-row>
       </a-col>
@@ -151,7 +163,7 @@
           <!-- <div slot="footer"></div> -->
         </a-list>
          <div class="div-freestyle item-category" @click="link('all')" style="padding:10px;padding-left:36px;cursor:pointer">
-          <span>Todas las categorias</span>
+          <span>TODAS LAS CATEGORÍAS</span>
         </div>
       </a-col>
 

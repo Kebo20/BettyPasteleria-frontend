@@ -1,7 +1,7 @@
 <template>
   <div  style="overflow-x: hidden;">
     <a-row>
-      <a-col
+      <!-- <a-col
         :xs="23"
         :sm="11"
         :md="11"
@@ -10,14 +10,15 @@
         v-show="this.$store.state.responsive ? false : true"
       >
         <Menu />
-      </a-col>
-      <a-col :xs="23" :sm="11" :md="11" :lg="18" :xl="18" v-show="this.$store.state.responsive ? false : true">
-        <a-carousel arrows autoplay>
+      </a-col> -->
+      <a-col :xs="23" :sm="11" :md="11" :lg="24" :xl="24" v-show="this.$store.state.responsive ? false : true" >
+        <a-carousel arrows autoplay > 
           <div>
             <img
               height="500px"
               width="100%"
               src="https://images.pexels.com/photos/1739748/pexels-photo-1739748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              
             />
           </div>
           <div>
@@ -75,11 +76,11 @@
             border-radius: 5px;
             margin-bottom: 10px;
           "
-          >Novedades:</span
+          >Menú:</span
         >
         <a-row>
           <br />
-          <a-col
+          <!-- <a-col
             :xs="23"
             :sm="11"
             :md="11"
@@ -90,7 +91,8 @@
             :key="product.idProduct"
           >
             <Product :product="product" />
-          </a-col>
+          </a-col> -->
+          <Products />
         </a-row>
       </a-col>
     </a-row>
@@ -99,10 +101,12 @@
 <script>
 import Menu from "../components/Menu.vue";
 import Product from "../components/Product.vue";
+import Products from "./products.vue";
+
 import axios from "../Config/axios";
 
 export default {
-  components: { Menu, Product },
+  components: { Menu, Products },
   data() {
     return {
       data: [
@@ -166,6 +170,9 @@ export default {
   line-height: 160px;
   background: #a6b2c7;
   overflow: hidden;
+  border-radius:25px;
+  /* box-shadow: rgba(3, 39, 45, 0.25) 0px 10px 10px -2px, rgba(1, 34, 36, 0.3) 0px 3px 7px -3px; */
+
 }
 
 .ant-carousel >>> .slick-slide h3 {
