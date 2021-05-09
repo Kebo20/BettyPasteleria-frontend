@@ -28,7 +28,7 @@
           <a-col :xs="8" style="text-align: right">
             <a-tag
               style="font-size: 19px; padding: 5px; margin-bottom: 5px"
-              color="blue"
+              color="#73BFAE"
               ><b>S/. {{ product.price }} </b></a-tag
             >
           </a-col>

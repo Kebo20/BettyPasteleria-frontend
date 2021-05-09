@@ -38,7 +38,7 @@
             <a-menu-item key="home" >
               <router-link to="/"> <a-icon type="shop" />Inicio </router-link>
             </a-menu-item>
-              <a-menu-item
+              <!-- <a-menu-item
               key="fb"
             >
              <a href="https://www.facebook.com/freestyle2911" target="_blank"><a-icon type="facebook" />Facebook </a> 
@@ -47,7 +47,7 @@
               key="ig"
             >
              <a href="https://www.facebook.com/freestyle2911" target="_blank"> <a-icon type="instagram" />Instagram </a> 
-            </a-menu-item>
+            </a-menu-item> -->
             <a-menu-item v-if="this.$store.state.rol == ''" key="login">
               <router-link to="/login">
                 <a-icon type="login" />Ingresar
@@ -74,7 +74,7 @@
           <!-- </div> -->
         </a-layout-content>
         <a-layout-footer style="text-align: center">
-          FreeStyle ©2021 Created by
+          BettyPastelería ©2021 Created by
           <a href="https://gogazo.com" target="_blank">Gogazo </a>
         </a-layout-footer>
       </a-layout>
@@ -96,7 +96,7 @@ export default {
   },
   mounted() {
     this.responsive();
-    this.$store.commit("api_url", "https://freestyle-backend.gogazo.com");
+    this.$store.commit("api_url", "https://bettypasteleria-backend.gogazo.com");
     // this.$store.commit("api_url", "http://freestyle-backend");
 
   },
@@ -229,9 +229,9 @@ a {
 
 
 .header {
-   background: linear-gradient(-90deg, #086fbb 1%, #232323 99%) !important; 
+    background: linear-gradient(-90deg, #4b9383 1%, #73BFAE 99%) !important; 
   /* background: linear-gradient(-90deg, #2180ce 1%, #2180ce 99%) !important; */
-  // background-image: url('https://www.bypeople.com/wp-content/uploads/2015/05/css-dark-chain-background.png')  !important;
+  // background-image: url('https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')  !important;
 
 }
 </style>

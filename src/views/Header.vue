@@ -4,7 +4,7 @@
       <a-col :xs="23" :sm="11" :md="11" :lg="1" :xl="1"> </a-col>
       <a-col :xs="23" :sm="11" :md="11" :lg="6" :xl="6">
         <router-link to="/">
-          <span style="color: white; font-size: 50px">FreeStyle</span>
+          <span style="color: white; font-size: 70px;font:oblique bold  cursive">Betty</span>
         </router-link>
       </a-col>
       <a-col

@@ -17,21 +17,21 @@
             <img
               height="500px"
               width="100%"
-              src="https://phantom.pe/pub/media/wysiwyg/slider-corsair.jpg"
+              src="https://images.pexels.com/photos/1739748/pexels-photo-1739748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
           </div>
           <div>
             <img
               height="500px"
               width="100%"
-              src="https://phantom.pe/pub/media/wysiwyg/banner-semana-santa2.jpg"
+              src="https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
           </div>
           <div>
             <img
               height="500px"
               width="100%"
-              src="https://phantom.pe/pub/media/wysiwyg/slider-razer.jpg"
+              src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
           </div>
         </a-carousel>
@@ -42,21 +42,21 @@
             <img
               height="300px"
               width="100%"
-              src="https://phantom.pe/pub/media/wysiwyg/slider-corsair.jpg"
+              src="https://images.pexels.com/photos/1739748/pexels-photo-1739748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
           </div>
           <div>
             <img
               height="300px"
               width="100%"
-              src="https://phantom.pe/pub/media/wysiwyg/banner-semana-santa2.jpg"
+              src="https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
           </div>
           <div>
             <img
               height="300px"
               width="100%"
-              src="https://phantom.pe/pub/media/wysiwyg/slider-razer.jpg"
+              src="https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             />
           </div>
         </a-carousel>
@@ -71,7 +71,7 @@
           style="
             color: #232323;
             font-size: 30px;
-            border-bottom: 3px solid #086fbb !important;
+            border-bottom: 3px solid #73BFAE !important;
             border-radius: 5px;
             margin-bottom: 10px;
           "
@@ -173,7 +173,7 @@ export default {
 }
 .div-freestyle {
   /* background: linear-gradient(-180deg, #086FBB 1%, #232323 99%) ; */
-  background-color: #033254;
+  background-color: #73BFAE;
   color: white;
 }
 

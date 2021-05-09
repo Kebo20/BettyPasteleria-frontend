@@ -35,8 +35,8 @@
       </a-col>
 
       <a-col :xs="this.$store.state.responsive ?24:17" >
-        <div style="overflow-x:scroll;">
-        <a-tag color="#033254" style="font-size: 21px; padding: 4px;"
+        <div style="overflow:hidden;">
+        <a-tag color="#73BFAE" style="font-size: 21px; padding: 4px;"
           ><b> {{ category.name }} </b>
         </a-tag>
         </div>
@@ -262,7 +262,7 @@ export default {
 }
 
 .ant-input {
-  background: linear-gradient(-90deg, #086fbb 1%, #232323 99%) !important;
+  background: linear-gradient(-90deg, #57a594 1%, #73BFAE 99%) !important;
   /* background-color: #086fbb!important; */
 
   color: #fff !important;
@@ -288,13 +288,13 @@ export default {
 
 .div-freestyle {
   /* background: linear-gradient(-180deg, #086FBB 1%, #232323 99%) ; */
-  background-color: #033254 !important;
+  background-color: #73BFAE !important;
   color: white !important;
 }
 
 .item-category:hover{
   background-color: #c5ccd1 !important;
-  color: #033254 !important;
+  color: #73BFAE !important;
 
 
 }

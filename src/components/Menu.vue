@@ -87,12 +87,12 @@ export default {
 <style scoped>
 .div-freestyle {
   /* background: linear-gradient(-180deg, #086FBB 1%, #232323 99%) ; */
-  background-color: #033254 !important;
+  background-color: #73BFAE !important;
   color: white !important;
 }
 
 .item-category:hover {
   background-color: #c5ccd1 !important;
-  color: #033254 !important;
+  color: #73BFAE !important;
 }
 </style>
