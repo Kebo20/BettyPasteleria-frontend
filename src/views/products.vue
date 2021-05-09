@@ -25,7 +25,7 @@
           </a-list-item>
 
           <div slot="header">
-            <a-icon type="menu" /> <span>Buscar en: </span>
+            <a-icon type="menu" /> <span>BUSCAR EN:</span>
           </div>
           <!-- <div slot="footer"></div> -->
         </a-list>
@@ -47,7 +47,8 @@
             :md="13"
             :lg="4"
             :xl="4"
-            style="margin-top: 30px;display:none"
+            style="margin-top: 30px"
+            v-show="!this.$store.state.responsive"
           >
             <a-select
               placeholder="Ordenar por "
@@ -66,8 +67,9 @@
             :md="3"
             :lg="2"
             :xl="2"
-            v-show="order == 'ASC'"
-            style="margin-top: 30px;display:none"
+            v-show="order == 'ASC'&&!this.$store.state.responsive"
+            style="margin-top: 30px"
+
           >
             <a-button shape="circle" icon="up" @click="changeOrder" />
           </a-col>
@@ -77,7 +79,7 @@
             :md="3"
             :lg="2"
             :xl="2"
-            v-show="order == 'DESC'"
+            v-show="order == 'DESC'&&!this.$store.state.responsive"
             style="margin-top: 30px"
           >
             <a-button shape="circle" icon="down" @click="changeOrder" />
@@ -94,7 +96,7 @@
             style="margin-top: 30px"
           >
             <input
-              placeholder="Busque aquí "
+              placeholder="Buscar aquí"
               style="width: 100%"
               class="ant-input"
               v-model="search"
@@ -119,7 +121,6 @@
           >
             <Product :product="product" />
           </a-col>
-
            <a-col
             :xs="23"
             :sm="11"
@@ -127,9 +128,10 @@
             :lg="8"
             :xl="8"
             style="margin-bottom: 5px"
-            v-if="arrayProducts.length==0"
+            v-show='arrayProducts.length==0'
           >
             <span>Sin resultados encontrados</span>
+            <br><br>
           </a-col>
         </a-row>
       </a-col>
@@ -158,7 +160,7 @@
           </a-list-item>
 
           <div slot="header">
-            <a-icon type="menu" /> <span>CATEGORÍAS</span>
+            <a-icon type="menu" /> <span>BUSCAR EN:</span>
           </div>
           <!-- <div slot="footer"></div> -->
         </a-list>
