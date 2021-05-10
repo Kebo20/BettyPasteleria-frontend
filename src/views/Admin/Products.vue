@@ -148,7 +148,7 @@
 
         <a-form-item label="Precio antiguo">
           <a-input-number
-            :min="1"
+            :min="0"
             v-decorator="[
               'price_old',
               {

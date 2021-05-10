@@ -8,11 +8,14 @@
         width="300px"
         height="300px"
       />
-      <a-card-meta :title="product.name" description="">
-        <a-avatar slot="avatar" :src="this.$store.state.api_url+product.image" />
+      <a-card-meta :title="product.name" :description="product.description">
+        <!-- <a-avatar slot="avatar" :src="this.$store.state.api_url+product.image" /> -->
       </a-card-meta>
       <div style="margin-top: 15px">
         <a-row>
+           <!-- <a-col :xs="24" style="text-align: left">
+            {{product.name}}
+          </a-col> -->
           <a-col v-show="product.price_old != 0" :xs="14">
             <a-tag
               style="
