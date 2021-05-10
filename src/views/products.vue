@@ -97,7 +97,6 @@
             v-show="this.$store.state.responsive"
           >
             <a-select
-              show-search
               placeholder="Categorías"
               option-filter-prop="children"
               style="width: 100%"
