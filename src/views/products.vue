@@ -1,11 +1,14 @@
 <template>
   <div style="justify-content: center">
     <a-row>
-      <a-col :xs="6" style="margin-right: 13px" v-show="this.$store.state.responsive ? false : true">
-       
+      <a-col
+        :xs="6"
+        style="margin-right: 13px"
+        v-show="this.$store.state.responsive ? false : true"
+      >
         <a-list bordered :data-source="arrayCategories" class="div-freestyle">
           <a-list-item
-          class="item-category"
+            class="item-category"
             slot="renderItem"
             style="cursor: pointer"
             @click="link(item.idCategory)"
@@ -27,18 +30,21 @@
           <div slot="header">
             <a-icon type="menu" /> <span>BUSCAR EN:</span>
           </div>
-          <!-- <div slot="footer"></div> -->
         </a-list>
-         <div class="div-freestyle item-category" @click="link('all')" style="padding:10px;padding-left:36px;cursor:pointer">
+        <div
+          class="div-freestyle item-category"
+          @click="link('all')"
+          style="padding: 10px; padding-left: 36px; cursor: pointer"
+        >
           <span>TODAS LAS CATEGORÍAS</span>
         </div>
       </a-col>
 
-      <a-col :xs="this.$store.state.responsive ?24:17" >
-        <div style="overflow:hidden;">
-        <a-tag color="#73BFAE" style="font-size: 21px; padding: 4px;"
-          ><b> {{ category.name }} </b>
-        </a-tag>
+      <a-col :xs="this.$store.state.responsive ? 24 : 17">
+        <div style="overflow: hidden" v-show="!this.$store.state.responsive">
+          <a-tag color="#73BFAE" style="font-size: 21px; padding: 4px"
+            ><b> {{ category.name }} </b>
+          </a-tag>
         </div>
         <a-row>
           <a-col
@@ -67,9 +73,8 @@
             :md="3"
             :lg="2"
             :xl="2"
-            v-show="order == 'ASC'&&!this.$store.state.responsive"
+            v-show="order == 'ASC' && !this.$store.state.responsive"
             style="margin-top: 30px"
-
           >
             <a-button shape="circle" icon="up" @click="changeOrder" />
           </a-col>
@@ -79,13 +84,41 @@
             :md="3"
             :lg="2"
             :xl="2"
-            v-show="order == 'DESC'&&!this.$store.state.responsive"
+            v-show="order == 'DESC' && !this.$store.state.responsive"
             style="margin-top: 30px"
           >
             <a-button shape="circle" icon="down" @click="changeOrder" />
           </a-col>
           <a-col :xs="13" :sm="13" :md="13" :lg="2" :xl="2">
             <span></span>
+          </a-col>
+          <a-col
+            :xs="24"
+            v-show="this.$store.state.responsive"
+          >
+            <a-select
+              show-search
+              placeholder="Categorías"
+              option-filter-prop="children"
+              style="width: 100%"
+              :filter-option="filterOption"
+              @focus="handleFocus"
+              @blur="handleBlur"
+              @change="link"
+              v-model="idCategory"
+            >
+              <a-select-option value="all"
+                >Todas las categorias
+              </a-select-option>
+
+              <a-select-option
+                v-for="Category in arrayCategories"
+                :value="Category.idCategory"
+                :key="Category.idCategory"
+              >
+                {{ Category.name }}
+              </a-select-option>
+            </a-select>
           </a-col>
           <a-col
             :xs="24"
@@ -121,54 +154,20 @@
           >
             <Product :product="product" />
           </a-col>
-           <a-col
+          <a-col
             :xs="23"
             :sm="11"
             :md="11"
             :lg="8"
             :xl="8"
             style="margin-bottom: 5px"
-            v-show='arrayProducts.length==0'
+            v-show="arrayProducts.length == 0"
           >
             <span>Sin resultados encontrados</span>
-            <br><br>
+            <br /><br />
           </a-col>
         </a-row>
       </a-col>
-
-        <a-col :xs="22" style="margin-right: 13px" v-show="this.$store.state.responsive ? true : false">
-       
-        <a-list bordered :data-source="arrayCategories" class="div-freestyle">
-          <a-list-item
-          class="item-category"
-            slot="renderItem"
-            style="cursor: pointer"
-            @click="link(item.idCategory)"
-            slot-scope="item, index"
-          >
-            <button
-              style="
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-                overflow: hidden;
-                outline: none;
-              "
-            >
-              {{ item.name }}
-            </button>
-          </a-list-item>
-
-          <div slot="header">
-            <a-icon type="menu" /> <span>BUSCAR EN:</span>
-          </div>
-          <!-- <div slot="footer"></div> -->
-        </a-list>
-         <div class="div-freestyle item-category" @click="link('all')" style="padding:10px;padding-left:36px;cursor:pointer">
-          <span>TODAS LAS CATEGORÍAS</span>
-        </div>
-      </a-col>
-
     </a-row>
   </div>
 </template>
@@ -188,6 +187,7 @@ export default {
       arrayProducts: [],
       search: "",
       category: [],
+      idCategory:this.$store.state.idCategory,
       arrayCategories: [],
     };
   },
@@ -276,7 +276,7 @@ export default {
 }
 
 .ant-input {
-  background: linear-gradient(-90deg, #57a594 1%, #73BFAE 99%) !important;
+  background: linear-gradient(-90deg, #57a594 1%, #73bfae 99%) !important;
   /* background-color: #086fbb!important; */
 
   color: #fff !important;
@@ -302,14 +302,12 @@ export default {
 
 .div-freestyle {
   /* background: linear-gradient(-180deg, #086FBB 1%, #232323 99%) ; */
-  background-color: #73BFAE !important;
+  background-color: #73bfae !important;
   color: white !important;
 }
 
-.item-category:hover{
+.item-category:hover {
   background-color: #c5ccd1 !important;
-  color: #73BFAE !important;
-
-
+  color: #73bfae !important;
 }
 </style>

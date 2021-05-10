@@ -1,5 +1,5 @@
 <template>
-  <div > 
+  <div>
     <!--Menu responsive -->
     <div>
       <a-drawer
@@ -16,7 +16,13 @@
     <a-layout id="components-layout-demo-responsive">
       <a-layout>
         <!-- <a-layout-header :style="{ background: 'linear-gradient(-90deg, #086FBB 8%, #00c9db 92%)', padding: 0 }"> -->
-        <div :style="this.$store.state.responsive?'text-align:left;':'text-align:right;'" >
+        <div
+          :style="
+            this.$store.state.responsive
+              ? 'text-align:left;'
+              : 'text-align:right;'
+          "
+        >
           <a-menu
             v-model="current"
             mode="horizontal"
@@ -25,9 +31,13 @@
               background: 'linear-gradient(-90deg, #086FBB 8%, #232323 92%) ',
               padding: 0,
             }"
-           
           >
-            <a-menu-item  v-if='this.$store.state.responsive' key="drawer" @click="showDrawer">
+            <a-menu-item
+              style="display: none"
+              v-if="this.$store.state.responsive"
+              key="drawer"
+              @click="showDrawer"
+            >
               <a-icon type="unordered-list" />
             </a-menu-item>
             <a-menu-item v-if="this.$store.state.rol != ''" key="admin">
@@ -38,7 +48,7 @@
             <!-- <a-menu-item key="home" >
               <router-link to="/"> <a-icon type="shop" />Inicio </router-link>
             </a-menu-item> -->
-              <!-- <a-menu-item
+            <!-- <a-menu-item
               key="fb"
             >
              <a href="https://www.facebook.com/freestyle2911" target="_blank"><a-icon type="facebook" />Facebook </a> 
@@ -62,7 +72,7 @@
             </a-menu-item>
           </a-menu>
         </div>
-     
+
         <Header />
 
         <!-- </a-layout-header> -->
@@ -98,7 +108,7 @@ export default {
     this.responsive();
     this.$store.commit("api_url", "https://bettypasteleria-backend.gogazo.com");
     // this.$store.commit("api_url", "http://freestyle-backend");
-
+    this.$store.commit("idCategory", "all");
   },
   methods: {
     onCollapse(collapsed, type) {
@@ -200,7 +210,7 @@ export default {
 }
 
 .navBar a {
-  color: #fff  !important;
+  color: #fff !important;
 }
 </style>
 
@@ -227,12 +237,10 @@ a {
 }
 // }
 
-
 .header {
-    background: linear-gradient(-90deg, #4b9383 1%, #73BFAE 99%) !important; 
+  background: linear-gradient(-90deg, #4b9383 1%, #73bfae 99%) !important;
   /* background: linear-gradient(-90deg, #2180ce 1%, #2180ce 99%) !important; */
   // background-image: url('https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')  !important;
-
 }
 </style>
 

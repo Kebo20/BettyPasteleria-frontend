@@ -8,6 +8,15 @@
         width="300px"
         height="300px"
       />
+      <div >
+         <a-tag
+              style="font-size: 10px; padding: 5px; margin-bottom: 25px"
+              color="#73BFAE"
+              ><b>{{ product.category_name }} </b></a-tag
+            >
+      </div>
+        
+            
       <a-card-meta :title="product.name" :description="product.description">
         <!-- <a-avatar slot="avatar" :src="this.$store.state.api_url+product.image" /> -->
       </a-card-meta>
@@ -31,15 +40,13 @@
           <a-col :xs="8" style="text-align: right">
             <a-tag
               style="font-size: 19px; padding: 5px; margin-bottom: 5px"
-              color="#73BFAE"
+              color="#2BB093"
               ><b>S/. {{ product.price }} </b></a-tag
             >
           </a-col>
-          <!-- <a-col :xs="24">
-            <a-button class="btn-primary">
-              <a-icon type="shopping-cart" /> Añadir al carrito
-            </a-button>
-          </a-col> -->
+          <a-col :xs="24">
+           
+          </a-col>
 
           <!-- <a-col :xs="1">
             <a-button class="btn-primary" @click="detail(product)">

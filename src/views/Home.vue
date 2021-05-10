@@ -123,7 +123,7 @@ export default {
     };
   },
   mounted() {
-    this.novelties();
+    // this.novelties();
   },
   methods: {
     novelties() {
@@ -187,7 +187,7 @@ export default {
 @media screen and (max-width: 650px) {
   .ant-carousel >>> .slick-slide {
   text-align: center;
-  height: 300px;
+  height: 260px;
   line-height: 160px;
   background: #a6b2c7;
   overflow: hidden;
