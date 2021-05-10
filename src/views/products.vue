@@ -92,10 +92,7 @@
           <a-col :xs="13" :sm="13" :md="13" :lg="2" :xl="2">
             <span></span>
           </a-col>
-          <a-col
-            :xs="24"
-            v-show="this.$store.state.responsive"
-          >
+          <a-col :xs="24" v-show="this.$store.state.responsive">
             <a-select
               placeholder="Categorías"
               option-filter-prop="children"
@@ -186,11 +183,13 @@ export default {
       arrayProducts: [],
       search: "",
       category: [],
-      idCategory:this.$store.state.idCategory,
+      idCategory: this.$store.state.idCategory,
       arrayCategories: [],
     };
   },
   mounted() {
+    this.$store.commit("idCategory", "all");
+    this.search = "";
     // var queryString = window.location.search;
     // var urlParams = new URLSearchParams(queryString);
     // this.search = urlParams.get("search") ? urlParams.get("search") : "";
