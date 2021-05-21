@@ -9,20 +9,18 @@
     box-shadow: rgba(62, 62, 89, 0.25) 0px 3px 3px -2px, rgba(0, 0, 0, 0.3) 0px 2px 2px -2px;
     margin-bottom:15px !important;    
     cursor: pointer; 
+   
     
 }
 
 .ant-card-body{
-    padding: 15px !important;
+    padding: 17px !important;
 }
 
-.ant-card{
-    /* margin-bottom: 80px !important; */
-/* width: 300px !important; */
 
-/* margin-bottom: 100px !important; */
-height: 500px !important;
-margin:1px !important;
+
+.ant-card-meta-description{
+    height: 100px !important;
 
 }
 
