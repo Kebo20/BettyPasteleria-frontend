@@ -4,7 +4,7 @@
         <img
           slot="cover"
           alt="foto"
-          src="https://bettypasteleria-backend.gogazo.com/storage/2021/05/1621575456.jpeg"
+          :src="this.$store.state.api_url+product.image"
           width="800px"
           height="255px"
 
