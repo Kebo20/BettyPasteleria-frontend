@@ -6,7 +6,7 @@
         alt="example"
         :src="this.$store.state.api_url+product.image"
         width="300px"
-        height="300px"
+        
       />
       <div >
          <a-tag

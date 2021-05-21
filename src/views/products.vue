@@ -43,7 +43,8 @@
       <a-col :xs="this.$store.state.responsive ? 24 : 17">
         <div style="overflow: hidden" v-show="!this.$store.state.responsive">
           <a-tag color="#73BFAE" style="font-size: 21px; padding: 4px"
-            ><b> {{ category.name }} </b>
+            ><b> {{ this.$store.state.idCategory!='all'?category.name:'Todas las categorías' }} </b>
+            
           </a-tag>
         </div>
         <a-row>
