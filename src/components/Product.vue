@@ -6,7 +6,7 @@
           alt="foto"
           :src="this.$store.state.api_url+product.image"
           width="800px"
-          height="255px"
+          height="355px"
 
         />
 
